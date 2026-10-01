@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запропонувати місто</title>
+</head>
+<body>
+    <header>
+        <h1>Запропонувати місто для наступного рейтингу</h1>
+        <nav>
+            <a href="./index.html">← Повернутися на головну блогу</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="#" method="post">
+            <p>
+                <label for="user-name">Ваше ім'я:</label><br>
+                <input type="text" id="user-name" name="user-name" required>
+            </p>
+
+            <p>
+                <label for="city">Назва міста:</label><br>
+                <input type="text" id="city" name="city" required>
+            </p>
+
+            <p>
+                <label for="country">Країна:</label><br>
+                <input type="text" id="country" name="country" required>
+            </p>
+
+            <p>
+                <label for="reason">Чому варто відвідати це місто?</label><br>
+                <select id="reason" name="reason" required>
+                    <option value="">-- Оберіть категорію --</option>
+                    <option value="architecture">Архітектура та історія</option>
+                    <option value="culture">Культура та мистецтво</option>
+                    <option value="gastronomy">Гастрономія</option>
+                    <option value="nature">Природа та пейзажі</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="comment">Короткий опис або враження:</label><br>
+                <textarea id="comment" name="comment" rows="4" cols="40" required></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Надіслати пропозицію</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Юлія Гащук | <a href="./index.html">На головну блогу</a></p>
+    </footer>
+</body>
+</html>
