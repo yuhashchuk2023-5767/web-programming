@@ -1,0 +1,183 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+// Navigation
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: v.$space-sm;
+
+    @include m.respond-to(v.$bp-tablet) {
+        flex-direction: row;
+        gap: v.$space-md;
+    }
+
+    a {
+        text-decoration: none;
+        color: v.$color-muted;
+        font-weight: 600;
+
+        &:hover, &.active {
+            color: v.$color-primary;
+        }
+    }
+}
+
+// Buttons
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: v.$radius;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: v.$color-primary;
+    color: #ffffff;
+
+    &:hover {
+        background-color: v.$color-primary-dark;
+    }
+}
+
+// Cards
+.metric-card, .service-card {
+    background-color: #ffffff;
+    padding: v.$space-md;
+    border-radius: v.$radius;
+    border: 1px solid v.$color-border;
+}
+
+.service-card {
+    &:hover {
+        transform: translateY(-2px);
+        transition: transform 0.2s ease;
+    }
+}
+
+.metric-label {
+    display: block;
+    font-size: 0.8rem;
+    color: v.$color-muted;
+}
+
+.metric-value {
+    display: block;
+    font-size: 1.2rem;
+    margin-block: v.$space-xs;
+}
+
+// Status Badges
+.status-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.status-ok {
+    background-color: #e6f4ea;
+    color: v.$color-success;
+}
+
+.status-alert {
+    background-color: #fce8e6;
+    color: v.$color-danger;
+}
+
+.text-danger {
+    color: v.$color-danger;
+}
+
+// Warning Banner
+.warning {
+    width: 100%;
+    padding: v.$space-md;
+    border: 1px solid v.$color-danger;
+    background-color: #fce8e6;
+    border-radius: v.$radius;
+
+    h2 {
+        color: v.$color-danger;
+    }
+}
+
+// Table Wrapper
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+
+    table {
+        width: 100%;
+        min-width: 600px;
+        border-collapse: collapse;
+        background-color: #ffffff;
+
+        th, td {
+            padding: v.$space-sm v.$space-md;
+            border-bottom: 1px solid v.$color-border;
+            text-align: left;
+        }
+
+        th {
+            background-color: v.$color-surface;
+        }
+    }
+}
+
+// Form Component
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: v.$space-md;
+    background-color: #ffffff;
+    padding: v.$space-lg;
+    border: 1px solid v.$color-border;
+    border-radius: v.$radius;
+
+    .form__fields {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: v.$space-md;
+
+        @include m.respond-to(v.$bp-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: v.$space-xs;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: v.$space-sm;
+        border: 1px solid v.$color-border;
+        border-radius: v.$radius;
+    }
+}
+
+// Footer Nav
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: v.$space-sm;
+
+    @include m.respond-to(v.$bp-tablet) {
+        flex-direction: row;
+        gap: v.$space-md;
+    }
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
