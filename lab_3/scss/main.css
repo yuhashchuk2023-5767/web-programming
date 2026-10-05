@@ -65,21 +65,35 @@ h1, h2, h3, h4 {
 }
 
 .hero {
-  width: min(100% - 32px, 1200px);
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  padding-block: 40px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 45%, rgba(255, 255, 255, 0) 75%), url("../images/3_lab_header.png") no-repeat center right/cover;
+  padding-block: 60px;
+  position: relative;
 }
 @media (min-width: 768px) {
   .hero {
-    grid-template-columns: 1.1fr 0.9fr;
-    align-items: center;
+    padding-block: 100px;
   }
 }
-.hero h2 {
-  font-size: clamp(1.8rem, 6vw, 2.5rem);
+
+.hero-container {
+  width: min(100% - 32px, 1200px);
+  margin-inline: auto;
+}
+
+.hero-content {
+  max-width: 520px;
+  position: relative;
+  z-index: 2;
+}
+.hero-content h2 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  margin-bottom: 16px;
+  color: #14213d;
+}
+.hero-content p {
+  margin-bottom: 24px;
+  color: #5f6b7a;
+  font-size: 1.05rem;
 }
 
 .monitoring-grid {
