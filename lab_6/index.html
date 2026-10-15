@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторна робота №6 | Акустична варта</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="module" src="./js/app.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Лабораторна робота №6</h1>
+      <p><strong>Тема:</strong> Відображення та фільтрація сенсорів у DOM</p>
+      <p><strong>Студентка:</strong> Гащук Юлія Володимирівна (група КН-41)</p>
+    </header>
+
+    <main>
+      <section class="monitoring-overview">
+        <h2>Поточний моніторинг</h2>
+        <p>Загальна мережа міських датчиків акустичного шуму.</p>
+      </section>
+
+      <!-- Нова секція згідно з вимогами лабораторної №6 -->
+      <section class="active-sensors">
+        <h2>Активні сенсори</h2>
+        <p class="section-desc">Секція показує активні сенсори та дає змогу відфільтрувати їх за районом і статусом.</p>
+        
+        <div class="sensor-filters">
+          <label>
+            Район
+            <select id="district-filter">
+              <option value="all">Усі райони</option>
+              <option value="Галицький">Галицький</option>
+              <option value="Франківський">Франківський</option>
+              <option value="Шевченківський">Шевченківський</option>
+              <option value="Сихівський">Сихівський</option>
+              <option value="Личаківський">Личаківський</option>
+              <option value="Залізничний">Залізничний</option>
+            </select>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="critical-filter">
+            Тільки критичні
+          </label>
+        </div>
+
+        <!-- Контейнер куди JS динамічно додаватиме картки -->
+        <div class="sensor-list"></div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
